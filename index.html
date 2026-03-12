@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculators for Genius | Majic of Science</title>
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:radial-gradient(circle at top,#0229c3,#11066f,aqua);
+color:white;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 60px;
+background:radial-gradient(circle,#0a0f2c,#030e64,#026785);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo img{
+width:120px;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:500;
+padding:8px 18px;
+border-radius:20px;
+transition:.3s;
+}
+
+.nav-links a:hover{
+background:#0c7946;
+}
+
+/* ===== ACTIVE BUTTON ===== */
+
+.active{
+background:linear-gradient(45deg,red,orange,yellow,green,cyan,blue,violet);
+padding:3px;
+border-radius:30px;
+}
+
+.active a{
+background:#0a0f2c;
+padding:8px 20px;
+border-radius:30px;
+}
+
+/* ===== TITLE ===== */
+
+.main-title{
+text-align:center;
+margin:40px 0 20px;
+font-size:36px;
+text-shadow:0 0 15px white;
+}
+
+/* ===== SLIDER ===== */
+
+.slider{
+width:1000px;
+max-width:90%;
+height:350px;
+margin:auto;
+overflow:hidden;
+border-radius:12px;
+border:2px solid cyan;
+box-shadow:0 0 25px cyan;
+}
+
+.slides{
+display:flex;
+width:1000px;
+animation:slide 16s infinite;
+}
+
+.slides img{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+
+@keyframes slide{
+  0%,20%{transform:translateX(0);}
+  25%,40%{transform:translateX(-1000px);}
+  50%,60%{transform:translateX(-2000px);}
+  75%,80%{transform:translateX(-3000px);}
+  100%{transform:translateX(0);}
+}
+
+
+/* ===== DESCRIPTION BOX ===== */
+
+.content-box{
+max-width:900px;
+margin:40px auto;
+background:rgba(255,255,255,0.08);
+padding:35px;
+border-radius:12px;
+line-height:1.8;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.2);
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.content-box p{
+margin-bottom:25px;
+font-size:17px;
+}
+
+.content-box b{
+color:#00eaff;
+font-size:18px;
+}
+
+/* ===== FOOTER ===== */
+
+.science-footer{
+background:radial-gradient(circle,#1a2a6c,#0f2027,#203a43,#2c5364);
+padding:40px 20px;
+margin-top:60px;
+}
+
+.footer-content{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.footer-logo img{
+width:130px;
+transition:.3s;
+}
+
+.footer-logo img:hover{
+transform:scale(1.08);
+}
+
+.footer-logo p{
+margin-top:10px;
+font-size:14px;
+opacity:.8;
+}
+
+/* links */
+
+.footer-links{
+display:flex;
+gap:25px;
+}
+
+.footer-links a{
+color:white;
+text-decoration:none;
+position:relative;
+}
+
+.footer-links a::after{
+content:"";
+position:absolute;
+bottom:-5px;
+left:0;
+width:0;
+height:2px;
+background:#00eaff;
+transition:.3s;
+}
+
+.footer-links a:hover::after{
+width:100%;
+}
+
+/* social */
+
+.footer-social img{
+width:40px;
+margin-left:10px;
+transition:.3s;
+filter:drop-shadow(0 0 6px rgb(249, 255, 255));
+}
+
+.footer-social img:hover{
+transform:scale(1.2);
+}
+
+/* bottom */
+
+.footer-bottom{
+text-align:center;
+margin-top:25px;
+font-size:14px;
+color:#ccc;
+border-top:1px solid rgba(255,255,255,0.2);
+padding-top:10px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.slider{
+height:220px;
+}
+
+.slides img{
+height:220px;
+}
+
+.content-box{
+margin:20px;
+}
+
+.footer-content{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+<img src="clogo.png">
+</div>
+
+<ul class="nav-links">
+
+<li class="active"><a href="index.html">Home</a></li>
+<li><a href="math.html">Math</a></li>
+<li><a href="physics.html">Physics</a></li>
+<li><a href="other.html">Other</a></li>
+
+</ul>
+
+</nav>
+
+<!-- TITLE -->
+
+<h1 class="main-title">🚀 Calculators for Genius</h1>
+
+<!-- SLIDER -->
+
+<div class="slider">
+
+<div class="slides">
+
+<img src="ba1.png">
+<img src="ba2.png">
+<img src="ba3.png">
+<img src="ba4.png">
+
+</div>
+
+</div>
+
+<!-- CONTENT -->
+
+<div class="content-box">
+
+<p>
+<b>Math Calculators:</b> Math calculators help students solve mathematical problems quickly and accurately. These tools include simple calculator, scientific calculator, fraction calculator, percentage calculator, triangle calculator and standard deviation calculator. They perform operations such as arithmetic, trigonometry, powers, roots and statistical calculations. These calculators make mathematics easier to understand and help students learn formulas faster.
+</p>
+
+<p>
+<b>Physics Calculators:</b> Physics calculators help solve problems related to motion, energy, force and other physical quantities. These tools can calculate speed, acceleration, momentum, work, power, kinetic energy and potential energy easily. By entering known values, students can instantly find unknown values and understand physics formulas used in science and engineering.
+</p>
+
+<p>
+<b>Other Calculators:</b> Besides academic calculators, this website also provides useful everyday tools like age calculator, date calculator, time calculator and unit conversion calculator. These tools help users calculate their exact age, find the difference between two dates, add or subtract time and convert units such as meters to kilometers or seconds to hours quickly and easily.
+</p>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="science-footer">
+
+<div class="footer-content">
+
+<div class="footer-logo">
+<img src="clogo.png">
+<p>Smart tools for smart minds 🚀</p>
+</div>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="math.html">Math</a>
+<a href="physics.html">Physics</a>
+<a href="other.html">Other</a>
+</div>
+
+<div class="footer-social">
+<a class="yt" href="https://youtube.com/@scientific-lab?si=Zm5yGPBtpiOj_IBP"><img src="yt.png"></a>
+<a class="wa" href="https://whatsapp.com/channel/0029VbC12fHBFLgNxE4gDh0k"><img src="whatsapp.png"></a>
+<a class="fb" href="https://www.facebook.com/profile.php?id=100094441086203"><img src="fb.png"></a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Calculators for Genius. All rights reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
